@@ -1,0 +1,138 @@
+body {
+  font-family: 'Arial', sans-serif;
+  /* background-color: #000; */
+  background-color: #faf3e0;
+}
+
+
+.keyboard-label {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Adjust the margin as needed */
+  font-weight: bold;
+}
+
+.labels{
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  height:auto;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+}
+kbd {
+  margin-left: 5px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #00ff00, #ffff00, #ff00ff);
+  border-radius: 10px;
+}
+
+
+.animation{
+  animation: gradientAnimation 4.5s infinite;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #00ff00, #ffff00, #ff00ff);
+  background-size: 200% 200%;
+  animation-fill-mode: forwards;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+    background-color: #ff00ff;
+  }
+  25% {
+    background-position: 100% 0%;
+    background-color: #00ffff;
+  }
+  50% {
+    background-position: 100% 100%;
+    background-color: #00ff00;
+  }
+  75% {
+    background-position: 0% 100%;
+    background-color: #ffff00;
+  }
+  100% {
+    background-position: 0% 0%;
+    background-color: #ff00ff;
+  }
+}
+
+.header {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-around;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.btn2{
+  background-color: #0056b3;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.timer span {
+  margin: 0 0.5rem;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#lap-list {
+  max-height: 49vh;
+  overflow-y: auto;
+}
+
+@media screen and (max-width:965px){
+  .labels{
+    display: none;
+  }
+}
